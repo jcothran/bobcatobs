@@ -12,6 +12,8 @@ Going to the demo site will show a leaflet map of the Southeastern US and severa
 * dissolved_oxygen
 * depth
 
+The website itself is structured as a template for other's use and project development. It uses a bootstrap layout with project and platform specific content separated into example php files listed in the 'include' folder. The main index php file contains the keyword 'custom' to reference more project custom content. Further discussion below under 'Development History'.
+
 # Demo steps
 
 * clicking a station placemark will change the tab to the 'Graph Data' controls. The platform clicked on the map should be selected in the first dropdown or other platforms can be selected from this dropdown. The platform selection will auto-fill the possible observation parameters available from this platform for the demo purposes. 
