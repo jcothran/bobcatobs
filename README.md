@@ -211,6 +211,7 @@ platform example - CSV file
       }
     ]
   }
+```
 
 platform example - CUSTOM - including eval script in evalCode string
 ```json
