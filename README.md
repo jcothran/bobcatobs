@@ -1,16 +1,16 @@
 # bobcatobs
-A JSON file configurable approach (and project template) to pulling time-series data from a variety of data sources into graph overlays or other browser visualization/analysis. Feedback, reuse and further development are welcomed via issues labeled feedback,question,documentation,enhancement,etc.
+A JSON file configurable approach (and project template) to pulling time-series data from a variety of data sources into graph overlays(currently using [d3](https://d3js.org/)) or other browser visualization/analysis. Feedback, reuse and further development are welcomed via issues labeled feedback,question,documentation,enhancement,etc.
 
 Demo site https://www.floridaapdata.org/bobcatobs/?json_link=https://drive.google.com/uc?export=downloadzzzid=1m0JFXeI7slOcsHUGm0lwZuB9jH4MhcoC
 
 README file project documentation in progress
 
-Going to the demo site will show a leaflet map of the Southeastern US and several placemarks that represent coastal/ocean observing platform locations providing various time-series data such as water-temperature,salinity,dissolved_oxygen,depth,ph,turbidity,air_temperature
+Going to the demo site will show a leaflet(https://leafletjs.com) map of the Southeastern US and several placemarks that represent coastal/ocean observing platform locations providing various time-series data such as water-temperature,salinity,dissolved_oxygen,depth,ph,turbidity,air_temperature
 
 > ![image](https://drive.google.com/uc?export=view&id=1mOJZf9ulbxk25GKktRFHO7irugMG9zGh "Map of several coastal/ocean platform locations")
 >  
 
-The website itself is structured as a template for other's use and project development. It uses a bootstrap layout with project and platform specific content separated into example php files listed in the 'include' folder. The main index php file contains the keyword 'custom' to reference more project custom content that individual projects might wish to change to suit them. Further discussion below under 'Development History'. While this project was developed in the context of sharing time-series observational data, the general approach and code could be applied to problems in other domains without a geospatial/mapping reference.
+The website itself is structured as a template for other's use and project development. It uses a [bootstrap](https://getbootstrap.com) layout with project and platform specific content separated into example php files listed in the 'include' folder. The main index php file contains the keyword 'custom' to reference more project custom content that individual projects might wish to change to suit them. Further discussion below under 'Development History'. While this project was developed in the context of sharing time-series observational data, the general approach and code could be applied to problems in other domains without a geospatial/mapping reference.
 
 # Demo site
 > ![image](https://drive.google.com/uc?export=view&id=1j4HMBcDPkwKZzG7CtvlRhPMEhvWcWzKV "Graph of several platform water temperatures")
@@ -254,6 +254,7 @@ platform example - CUSTOM - including eval script in evalCode string
   * average/min/max by various or custom time windows(x hours/days/etc)
   * correlation indexes between time-series sets
   * ???
+* while the graphing currently uses d3, other javascript analysis/visualization libraries could be added or used also
 
 # Other Notes
 
