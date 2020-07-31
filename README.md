@@ -39,7 +39,7 @@ The website itself is structured as a template for other's use and project devel
 ## Multiple parameters
 
 > ![image](https://drive.google.com/uc?export=view&id=14FCbABiyM7sQx1VlQI0DptIyAEXTQB0N "Graph of several platform water temperatures")
->  
+>   
 
 ## Fixed Time-index
 
