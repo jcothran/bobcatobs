@@ -250,6 +250,10 @@ platform example - CUSTOM - including eval script in evalCode string
 * JSON config
   * add plot/visualization/analysis job/grouping tags to automatically plot/review recent time-series data(updates) from an earlier tagged set of platforms/parameters
   * add platform/station profiles,etc to reduce repeated elements between similar platforms
+* additional processing or analysis/visualiztion within or between pulled time-series for
+  * average/min/max by various or custom time windows(x hours/days/etc)
+  * correlation indexes between time-series sets
+  * ???
 
 # Other Notes
 
