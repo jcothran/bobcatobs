@@ -3,7 +3,7 @@ A JSON file configurable approach (and project template) to pulling time-series 
 
 Demo site https://www.floridaapdata.org/bobcatobs/?json_link=https://drive.google.com/uc?export=downloadzzzid=1m0JFXeI7slOcsHUGm0lwZuB9jH4MhcoC
 
-README file in progress
+README file project documentation in progress
 
 Going to the demo site will show a leaflet map of the Southeastern US and several placemarks that represent coastal/ocean observing platform locations providing various time-series data such as
 
