@@ -62,7 +62,7 @@ The two main problems in assembling or aggregating time-series data from a range
 
 The use of a JSON configuration file(for example, the demo file which can be reviewed [here](https://drive.google.com/file/d/1m0JFXeI7slOcsHUGm0lwZuB9jH4MhcoC/view?usp=sharing) allows the ability to create
 * a custom list of platforms/stations/sources of time-series of interest and their
-  * time-series request endpoint link
+  * request endpoint link
   * time and available parameter reference names and formats
   * associated javascript that can be shared and evaluated(using javascript 'eval' function) to convert data source responses into a common data format/array used in the browser for overlays and further visualization/analysis - see the 'SUN2' platform reference and 'evalCode' script([unminify](https://unminify.com/) version below)
   
