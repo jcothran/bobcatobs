@@ -16,7 +16,7 @@ Going to the demo site will show a leaflet map of the Southeastern US and severa
 
 The website itself is structured as a template for other's use and project development. It uses a bootstrap layout with project and platform specific content separated into example php files listed in the 'include' folder. The main index php file contains the keyword 'custom' to reference more project custom content that individual projects might wish to change to suit them. Further discussion below under 'Development History'. While this project was developed in the context of sharing time-series observational data, the general approach and code could be applied to problems in other domains without a geospatial/mapping reference.
 
-# Demo steps
+# Demo site
 > ![image](https://drive.google.com/uc?export=view&id=1j4HMBcDPkwKZzG7CtvlRhPMEhvWcWzKV "Graph of several platform water temperatures")
 >  
 
@@ -28,13 +28,23 @@ The website itself is structured as a template for other's use and project devel
 * click 'Add Graph' to plot the time-series data. The cursor over the graph should show the current date and value at the graph point and the gray bar below the graph represents a selection area for the graph that can be used to zoom in or out on the graph
 * the user can continue to select other parameter, platform and date ranges and clicking 'Add Graph' to overlay onto the existing graph
 
-# Additional functions
+## Additional functions
 
 * a legend line with a checkbox allows their line to be toggle on/off in the graph
 * the legend line also contains a button to download the time-series of that line as a simple CSV file(datetime,value)
 * after graph(s) are present, the graph can be saved as png or printed using those buttons
 * click 'Clear Graph' to clear the current graph area
 * 
+
+## Multiple parameters
+
+> ![image](https://drive.google.com/uc?export=view&id=14FCbABiyM7sQx1VlQI0DptIyAEXTQB0N "Graph of several platform water temperatures")
+>  
+
+## Fixed-Time
+
+> ![image](https://drive.google.com/uc?export=view&id=1CHPX8Pp3fuC2tQpnIE_uQHKrOb5_-6y3 "Graph of same parameter/time-span over several years")
+>  
 
 # Concepts - use of JSON configuration file to allow custom selection and bridge complexity
 
