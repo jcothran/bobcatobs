@@ -5,7 +5,7 @@ Demo site https://www.floridaapdata.org/bobcatobs/?json_link=https://drive.googl
 
 README file project documentation in progress
 
-Going to the demo site will show a leaflet(https://leafletjs.com) map of the Southeastern US and several placemarks that represent coastal/ocean observing platform locations providing various time-series data such as water-temperature,salinity,dissolved_oxygen,depth,ph,turbidity,air_temperature
+Going to the demo site will show a [leaflet](https://leafletjs.com) map of the Southeastern US and several placemarks that represent coastal/ocean observing platform locations providing various time-series data such as water-temperature,salinity,dissolved_oxygen,depth,ph,turbidity,air_temperature
 
 > ![image](https://drive.google.com/uc?export=view&id=1mOJZf9ulbxk25GKktRFHO7irugMG9zGh "Map of several coastal/ocean platform locations")
 >  
