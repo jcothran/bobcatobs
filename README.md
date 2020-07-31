@@ -88,7 +88,7 @@ d3.json(sourceUrl + ".json?time%2C" + sourceRefObs + "&time%3E=" + erddap_startD
 
 The [demo JSON config file](https://drive.google.com/file/d/1m0JFXeI7slOcsHUGm0lwZuB9jH4MhcoC/view?usp=sharing) consists of __obsList__ section, listing observation/parameters that might be used and following platform/station/datasource section which lists the data links and associated properties and observations for each data source. The config file can be loaded automatically from a trusted source in the __json_link__ site call or loaded at the client by the 'Load platform file' button. The JSON configuration info could also be hard-coded as part of website development.
 
-__dataSourceType__
+## dataSourceType
 A CSV file with a datetime column and several associated parameters can be handled by the current config file and associated code.
 
 I've provided examples processing from a relational database web service the site template provides, an [ERDDAP](https://coastwatch.pfeg.noaa.gov/erddap/index.html) web service, a [CDMO(NERRS)](https://cdmo.baruch.sc.edu) web service and a CUSTOM version of the earlier present ERDDAP service. Aside from the CSV file case, all the other services could also be listed/shared as CUSTOM services and the CUSTOM case provides a way to add/share other data sources/web services not currently listed.
