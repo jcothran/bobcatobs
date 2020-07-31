@@ -1,7 +1,7 @@
 # bobcatobs
 A JSON file configurable approach (and project template) to pulling time-series data from a variety of data sources into graph overlays(currently using [d3](https://d3js.org/)) or other browser visualization/analysis. Feedback, reuse and further development are welcomed via issues labeled feedback,question,documentation,enhancement,etc.
 
-Demo site https://www.floridaapdata.org/bobcatobs/?json_link=https://drive.google.com/uc?export=downloadzzzid=1m0JFXeI7slOcsHUGm0lwZuB9jH4MhcoC
+__Demo site__ https://www.floridaapdata.org/bobcatobs/?json_link=https://drive.google.com/uc?export=downloadzzzid=1m0JFXeI7slOcsHUGm0lwZuB9jH4MhcoC
 
 README file project documentation in progress
 
