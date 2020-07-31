@@ -34,7 +34,6 @@ The website itself is structured as a template for other's use and project devel
 * click 'Clear Graph' to clear the current graph area
 * metric/english unit selection available
 * default ‘fixed-y’ limits the y-index to a preset parameter range to allow easier same-graph comparison between plots, deselecting ‘fixed-y’ plots between the selected data min&max(including possible outliers which might skew the graph) for each graph
-* mouse-over values are shown when hovering over the graph
 * graph line breaks are created for data gaps > custom time threshold
 * same params plot against the same fixed-y index, different params/units create additional y-index
 * by default, x-index(time) tracks last graphed time range, but checking 'Fixed Time-index' will allow differing time periods to be overlayed, snapping to the most recent time range if the brush control is used
