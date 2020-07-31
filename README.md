@@ -61,7 +61,7 @@ The two main problems in assembling or aggregating time-series data from a range
   * the data request format - how are time and parameter names referenced and formatted? what source-unique functionalities are present in the request format?
   * the data returned format - if JSON(or CSV,etc), what is the object structure and are time and parameter formatted and referenced the same as the request?
 
-The use of a JSON configuration file(for example, the demo file which can be reviewed [here](https://drive.google.com/file/d/1m0JFXeI7slOcsHUGm0lwZuB9jH4MhcoC/view?usp=sharing)) allows the ability to create
+The use of a JSON configuration file(for example, the demo file which can be reviewed [here](https://drive.google.com/file/d/1m0JFXeI7slOcsHUGm0lwZuB9jH4MhcoC/view?usp=sharing) allows the ability to create
 * a custom list of platforms/stations/sources of time-series of interest and their
   * time-series request endpoint link
   * time and available parameter reference names and formats
@@ -84,13 +84,149 @@ d3.json(sourceUrl + ".json?time%2C" + sourceRefObs + "&time%3E=" + erddap_startD
 ```
   * location(optional)
 
+## JSON config file structure
+
+The [demo JSON config file](https://drive.google.com/file/d/1m0JFXeI7slOcsHUGm0lwZuB9jH4MhcoC/view?usp=sharing) consists of __obsList__ section, listing observation/parameters that might be used and following platform/station/datasource section which lists the data links and associated properties and observations for each data source. The config file can be loaded automatically from a trusted source in the __json_link__ site call or loaded at the client by the 'Load platform file' button. The JSON configuration info could also be hard-coded as part of website development.
+
+__obsList__ example
+```json
+  {
+    "name": "obs",
+    "obsList": [
+      {
+        "obsName": "water_temperature",
+        "unitMetric": "C",
+	"unitEnglish": "F",
+        "yMin": 0,
+        "yMax": 37
+      },
+      {
+        "obsName": "salinity",
+	"unitMetric": "ppt",
+        "yMin": 0,
+        "yMax": 36
+      }
+    ]
+  },
+```
+
+platform examples
+```json
+ {
+    "name": "CAP2",
+    "value": "https://erddap.secoora.org/erddap/tabledap/org_cormp_cap2",
+    "organization":"CORMP",
+    "dataSourceType":"ERDDAP",
+    "lat":"32.8032",
+    "lon":"-79.6204",
+    "subitems": [{
+        "name": "water_temperature",
+        "value": "water_temperature",
+	"sourceRefObs": "sea_water_temperature"
+      },
+      {
+        "name": "salinity",
+        "value": "salinity",
+	"sourceRefObs": "sea_water_practical_salinity"
+      },
+      {
+        "name": "air_temperature",
+        "value": "air_temperature",
+	"sourceRefObs": "air_temperature"
+      }
+    ]
+  },
+  {
+    "name": "MP3C",
+    "value": "MP3C",
+    "organization":"FLDEP",
+    "dataSourceType":"RDB",
+    "lat":"26.629",
+    "lon":"-82.067",
+    "strTimeParse": "%m/%d/%Y %H:%M",
+    "sourceRefTime": "DateTimeStamp",
+    "subitems": [{
+        "name": "water_temperature",
+        "value": "water_temperature",
+	"sourceRefObs": "Temp"
+      },
+      {
+        "name": "salinity",
+        "value": "salinity",
+	"sourceRefObs": "Sal"
+      },
+      {
+        "name": "dissolved_oxygen_mgl",
+        "value": "dissolved_oxygen_mgl",
+	"sourceRefObs": "DO_mgl"
+      }
+    ]
+  },
+  {
+    "name": "EB03",
+    "value": "https://drive.google.com/uc?export=download&id=1pX_0MaWZLVzwLgsVO0tABGF1fYHseUiV",
+    "organization":"FLDEP",
+    "dataSourceType":"CSV",
+    "lat":"26.355",
+    "lon":"-81.845",
+    "strTimeParse": "%m/%d/%Y %H:%M",
+    "sourceRefTime": "DateTimeStamp",
+    "subitems": [{
+        "name": "water_temperature",
+        "value": "water_temperature",
+	"sourceRefObs": "Temp"
+      },
+      {
+        "name": "salinity",
+        "value": "salinity",
+	"sourceRefObs": "Sal"
+      },
+      {
+        "name": "conductivity",
+        "value": "specific_conductivity",
+	"sourceRefObs": "SpCond"
+      },
+      {
+        "name": "dissolved_oxygen_mgl",
+        "value": "dissolved_oxygen_mgl",
+	"sourceRefObs": "DO_mgl"
+      }
+    ]
+  },  {
+    "name": "SUN2",
+    "value": "https://erddap.secoora.org/erddap/tabledap/org_cormp_sun2",
+    "organization":"CORMP",
+    "dataSourceType":"CUSTOM",
+    "evalCode":"erddap_startDate=startDate.substr(6,4)+'-'+startDate.substr(0,2)+'-'+startDate.substr(3,2),erddap_endDate=endDate.substr(6,4)+'-'+endDate.substr(0,2)+'-'+endDate.substr(3,2),d3.json(sourceUrl+'.json?time%2C'+sourceRefObs+'&time%3E='+erddap_startDate+'&time%3C='+erddap_endDate,function(a,t){if(a)throw a;if(spinner.stop(),0!=t){parseTime=d3.timeParse('%Y-%m-%dT%H:%M:%S%Z'),data2=t.table.rows;var e=data2.map(function(a){return{m_date:parseTime(a[0]),[obsValue]:+a[1]}});obsData=e.slice(),graphObs(obsData)}else swal('No data available')});",
+    "lat":"33.8444",
+    "lon":"-78.4839",
+    "subitems": [{
+        "name": "water_temperature",
+        "value": "water_temperature",
+	"sourceRefObs": "sea_water_temperature"
+      },
+      {
+        "name": "salinity",
+        "value": "salinity",
+	"sourceRefObs": "sea_water_practical_salinity"
+      },
+      {
+        "name": "air_temperature",
+        "value": "air_temperature",
+	"sourceRefObs": "air_temperature"
+      }
+    ]
+  }
+```
+
 # Potential Enhancements
 
 * add higher 'grouping' level for platforms, to associate by organization, etc
 * process quality control(QC) flags for tagging/filtering suspect or other flagged data
 * include platform available data ranged for platforms/parameters
-* add plot/visualization/analysis job/grouping tags to automatically plot/review recent time-series data(updates) from an earlier tagged set of platforms/parameters
-
+  * JSON config
+  * add plot/visualization/analysis job/grouping tags to automatically plot/review recent time-series data(updates) from an earlier tagged set of platforms/parameters
+  * add platform/station profiles,etc to reduce repeated elements between similar platforms
 
 # Other Notes
 
