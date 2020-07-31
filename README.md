@@ -34,7 +34,11 @@ The website itself is structured as a template for other's use and project devel
 
 # Concepts
 
-# Ideas for other functions
+# Ideas for other functionality
 
+
+# Notes
 
 # Development History
+
+The original site this was generalized from was for the Florida Preserves https://www.floridaapdata.org which is a set of around 30 water quality monitoring sites and database of several million records spanning around the past 20 years. This site has 2 additional navigation tabs, one for 'Choose Preserve' where a preserve represents a set of regionally clustered platforms/stations and 'Download Data' which allows the user to download pregenerated yearly station files. These tabs were removed or commented in the generalization of the project to help make things simpler. The 'Preserve' functionality could be uncommented and added back under other names such as 'Organization', etc to represent a way of grouping stations.
