@@ -32,12 +32,45 @@ The website itself is structured as a template for other's use and project devel
 * click 'Clear Graph' to clear the current graph area
 * 
 
-# Concepts
+# Concepts - use of JSON configuration file to allow custom selection and bridge complexity
+
+The two main problems in assembling or aggregating time-series data from a range of online data sources are
+
+* lack of standards or complexity in
+  * the data request format - how are time and parameter names referenced and formatted? what source-unique functionalities are present in the request format?
+  * the data returned format - if JSON(or CSV,etc), what is the object structure and are time and parameter formatted and referenced the same as the request?
+
+The use of a JSON configuration file(for example, the demo file which can be reviewed [here](https://drive.google.com/file/d/1m0JFXeI7slOcsHUGm0lwZuB9jH4MhcoC/view?usp=sharing)) allows the ability to create
+* a list of platforms/stations/sources of time-series of interest and their
+  * time-series request endpoint link
+  * time and available parameter reference names and formats
+  * associated javascript that can be shared and evaluated(using javascript 'eval' function) to convert data source responses into a common data format/array used in the browser for overlays and further visualization/analysis - see the 'SUN2' platform reference and 'evalCode' script([unminify](https://unminify.com/) version below)
+  
+```javascript
+erddap_startDate = startDate.substr(6, 4) + "-" + startDate.substr(0, 2) + "-" + startDate.substr(3, 2);
+erddap_endDate = endDate.substr(6, 4) + "-" + endDate.substr(0, 2) + "-" + endDate.substr(3, 2);
+d3.json(sourceUrl + ".json?time%2C" + sourceRefObs + "&time%3E=" + erddap_startDate + "&time%3C=" + erddap_endDate, function (a, t) {
+  if (a) throw a;
+  if ((spinner.stop(), 0 != t)) {
+    (parseTime = d3.timeParse("%Y-%m-%dT%H:%M:%S%Z")), (data2 = t.table.rows);
+    var e = data2.map(function (a) {
+      return { m_date: parseTime(a[0]), [obsValue]: +a[1] };
+    });
+    (obsData = e.slice()), graphObs(obsData);
+  } else swal("No data available");
+});
+
+```
+  * location(optional)
 
 # Ideas for other functionality
 
 
 # Notes
+
+In regards to security with using the javascript evaluation(eval) function, a longer general review link is [here](https://humanwhocodes.com/blog/2013/06/25/eval-isnt-evil-just-misunderstood).  The main potential advantage of using eval for this project is the abililty to create a few lines of javascript to handle unique complexities with the data source request or converting/mapping the data source response. This javascript can be [minified](https://javascript-minifier.com/) and placed in the JSON config file evalCode string and marked as a 'CUSTOM' dataSourceType.
+
+# Relational Database(RDB) example
 
 # Development History
 
