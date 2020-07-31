@@ -64,7 +64,7 @@ The use of a JSON configuration file(for example, the demo file which can be rev
 * a custom list of platforms/stations/sources of time-series of interest and their
   * request endpoint link
   * time and available parameter reference names and formats
-  * associated javascript that can be shared and evaluated(using javascript 'eval' function) to convert data source responses into a common data format/array used in the browser for overlays and further visualization/analysis - see the 'SUN2' platform reference and 'evalCode' script([unminify](https://unminify.com/) version below)
+  * associated javascript that can be shared and evaluated(using javascript 'eval' function) to convert/map data source responses into a common data format/array used in the browser for overlays and further visualization/analysis - see the 'SUN2' platform reference and 'evalCode' script([unminify](https://unminify.com/) version below)
   
 ```javascript
 erddap_startDate = startDate.substr(6, 4) + "-" + startDate.substr(0, 2) + "-" + startDate.substr(3, 2);
