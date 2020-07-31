@@ -41,7 +41,7 @@ The website itself is structured as a template for other's use and project devel
 > ![image](https://drive.google.com/uc?export=view&id=14FCbABiyM7sQx1VlQI0DptIyAEXTQB0N "Graph of several platform water temperatures")
 >  
 
-## Fixed-Time
+## Fixed Time-index
 
 > ![image](https://drive.google.com/uc?export=view&id=1CHPX8Pp3fuC2tQpnIE_uQHKrOb5_-6y3 "Graph of same parameter/time-span over several years")
 >  
