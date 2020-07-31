@@ -28,7 +28,7 @@ The website itself is structured as a template for other's use and project devel
     * MP3C - 2010 to 2018
     * EB03 - 2018 only - this data is pulled from a single year CSV file
     
-* click 'Add Graph' to plot the time-series data. The cursor over the graph should show the current date and value at the graph point and the gray bar below the graph represents a selection area for the graph that can be used to zoom in or out on the graph
+* click 'Add Graph' to plot the time-series data. The cursor over the graph should show the current date and value at the graph point and the gray bar(or brush control) below the graph represents a selection area for the graph that can be used to zoom in or out on the graph
 * the user can continue to select other parameter, platform and date ranges and clicking 'Add Graph' to overlay onto the existing graph
 
 ## Additional functions
@@ -37,14 +37,23 @@ The website itself is structured as a template for other's use and project devel
 * the legend line also contains a button to download the time-series of that line as a simple CSV file(datetime,value)
 * after graph(s) are present, the graph can be saved as png or printed using those buttons
 * click 'Clear Graph' to clear the current graph area
-* 
+* metric/english unit selection available
+* default ‘fixed-y’ limits the y-index to a preset parameter range to allow easier same-graph comparison between plots, deselecting ‘fixed-y’ plots between the selected data min&max(including possible outliers which might skew the graph) for each graph
+* mouse-over values are shown when hovering over the graph
+* graph line breaks are created for data gaps > custom time threshold
+* same params plot against the same fixed-y index, different params/units create additional y-index
+* by default, x-index(time) tracks last graphed time range, but checking 'Fixed Time-index' will allow differing time periods to be overlayed, snapping to the most recent time range if the brush control is used
 
 ## Multiple parameters
+
+Differing platforms/parameters can be compared with each other.
 
 > ![image](https://drive.google.com/uc?export=view&id=14FCbABiyM7sQx1VlQI0DptIyAEXTQB0N "Graph of several platform water temperatures")
 >   
 
 ## Fixed Time-index
+
+The 'Fixed Time-index' option allows different time windows to be overlayed - the same months overlayed across several years shown below.
 
 > ![image](https://drive.google.com/uc?export=view&id=1CHPX8Pp3fuC2tQpnIE_uQHKrOb5_-6y3 "Graph of same parameter/time-span over several years")
 >  
