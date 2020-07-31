@@ -12,8 +12,6 @@ Going to the demo site will show a leaflet map of the Southeastern US and severa
 * dissolved_oxygen
 * depth
 
-There are also 2 platforms listed off the US west coast(Oregon) if the map is zoomed out from its initial default.
-
 > ![image](https://drive.google.com/uc?export=view&id=1mOJZf9ulbxk25GKktRFHO7irugMG9zGh "Map of several coastal/ocean platform locations")
 >  
 
