@@ -12,7 +12,7 @@ Going to the demo site will show a leaflet map of the Southeastern US and severa
 * dissolved_oxygen
 * depth
 
-The website itself is structured as a template for other's use and project development. It uses a bootstrap layout with project and platform specific content separated into example php files listed in the 'include' folder. The main index php file contains the keyword 'custom' to reference more project custom content. Further discussion below under 'Development History'.
+The website itself is structured as a template for other's use and project development. It uses a bootstrap layout with project and platform specific content separated into example php files listed in the 'include' folder. The main index php file contains the keyword 'custom' to reference more project custom content that individual projects might wish to change to suit them. Further discussion below under 'Development History'. While this project was developed in the context of sharing time-series observational data, the general approach and code could be applied to problems in other domains without a geospatial/mapping reference.
 
 # Demo steps
 
@@ -31,3 +31,10 @@ The website itself is structured as a template for other's use and project devel
 * after graph(s) are present, the graph can be saved as png or printed using those buttons
 * click 'Clear Graph' to clear the current graph area
 * 
+
+# Concepts
+
+# Ideas for other functions
+
+
+# Development History
