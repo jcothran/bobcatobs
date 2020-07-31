@@ -47,7 +47,7 @@ Differing platforms/parameters can be compared with each other.
 
 ## Fixed Time-index
 
-The 'Fixed Time-index' option allows different time windows to be overlayed - the same months overlayed across several years shown below.
+The 'Fixed Time-index' option allows different time windows to be overlayed - the same months overlayed across several years(water_temperature April-June 2017-2020) shown below.
 
 > ![image](https://drive.google.com/uc?export=view&id=1CHPX8Pp3fuC2tQpnIE_uQHKrOb5_-6y3 "Graph of same parameter/time-span over several years")
 >  
