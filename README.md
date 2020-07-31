@@ -24,7 +24,9 @@ The website itself is structured as a template for other's use and project devel
 * clicking a station placemark will change the tab to the 'Graph Data' controls. The platform clicked on the map should be selected in the first dropdown or other platforms can be selected from this dropdown. The platform selection will auto-fill the possible observation parameters available from this platform for the demo purposes. 
 * select a start and end date(entering text directly or using the calendar popup) - for demo purposes, try smaller timespan windows of a few days or a week to get a quicker response
   * suggested date ranges for available data 
-    * SUN2, CAP2 - past several years up through the past day
+    * SUN2, CAP2, niwolwq, noczbwq, rkblhwq - past several years up through the past day
+    * MP3C - 2010 to 2018
+    * EB03 - 2018 only - this data is pulled from a single year CSV file
     
 * click 'Add Graph' to plot the time-series data. The cursor over the graph should show the current date and value at the graph point and the gray bar below the graph represents a selection area for the graph that can be used to zoom in or out on the graph
 * the user can continue to select other parameter, platform and date ranges and clicking 'Add Graph' to overlay onto the existing graph
@@ -78,7 +80,12 @@ d3.json(sourceUrl + ".json?time%2C" + sourceRefObs + "&time%3E=" + erddap_startD
 ```
   * location(optional)
 
-# Ideas for other functionality
+# Potential Enhancements
+
+* add higher 'grouping' level for platforms, to associate by organization, etc
+* process quality control(QC) flags for tagging/filtering suspect or other flagged data
+* include platform available data ranged for platforms/parameters
+* add plot/visualization/analysis job/grouping tags to automatically plot/review recent time-series data(updates) from an earlier tagged set of platforms/parameters
 
 
 # Other Notes
