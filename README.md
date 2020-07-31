@@ -246,7 +246,7 @@ platform example - CUSTOM - including eval script in evalCode string
 
 * add higher 'grouping' level for platforms, to associate by organization, etc
 * process quality control(QC) flags for tagging/filtering suspect or other flagged data
-* include platform available data ranges for platforms/parameters
+* include platform available date ranges for platforms/parameters data
 * JSON config
   * add plot/visualization/analysis job/grouping tags to automatically plot/review recent time-series data(updates) from an earlier tagged set of platforms/parameters
   * add platform/station profiles,etc to reduce repeated elements between similar platforms
