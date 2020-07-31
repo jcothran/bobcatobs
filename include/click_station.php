@@ -1,5 +1,5 @@
       //customPlatform
-      stationPick = e.target._tooltip._content.substring(0,4);
+      //stationPick = e.target._tooltip._content.substring(0,4);
 
       //special cases
       if (e.target._tooltip._content.includes("YRMAP1")) {

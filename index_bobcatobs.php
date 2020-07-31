@@ -1369,8 +1369,8 @@ function updateData() {
 
   //lookup yMin,yMax from json config file
   objObsList = objJSONConfig.find(record => record.name === 'obs');
-  yMin = objObsList.obsList.find(record => record.obsName === opt.label).yMin;
-  yMax = objObsList.obsList.find(record => record.obsName === opt.label).yMax;
+  yMin = objObsList.obsList.find(record => record.obsName === opt.value).yMin;
+  yMax = objObsList.obsList.find(record => record.obsName === opt.value).yMax;
 
   //alert(":"+document.getElementById('datepicker_start').value+":");
   if (document.getElementById('datepicker_start').value == 'Start Date') { swal('Please select a start date'); return; }
@@ -1394,7 +1394,7 @@ function updateData() {
 
   dataSourceType = objPlatform.dataSourceType;
   strTimeParse = objPlatform.strTimeParse;
-  sourceRefObs = objPlatform.subitems.find(record => record.name === opt.label).sourceRefObs;
+  sourceRefObs = objPlatform.subitems.find(record => record.value === opt.value).sourceRefObs;
   sourceUrl = document.getElementById('platform_choice').value;
   evalCode = objPlatform.evalCode;
 
@@ -1558,7 +1558,7 @@ $.ajax(
 
   var strMapping = 'var data3 = data2.map(function(d) { return { m_date: parseTime(d.'+objPlatform.sourceRefTime+'),';
   for (var i = 0; i < objPlatform.subitems.length; i++) {
-    strMapping = strMapping+objPlatform.subitems[i].name+": +d."+objPlatform.subitems[i].sourceRefObs+","; 
+    strMapping = strMapping+objPlatform.subitems[i].value+": +d."+objPlatform.subitems[i].sourceRefObs+","; 
   }
   
   //remove trailing comma
