@@ -81,7 +81,7 @@ d3.json(sourceUrl + ".json?time%2C" + sourceRefObs + "&time%3E=" + erddap_startD
 });
 
 ```
-  * location(optional)
+  * name,group,location(optional) or other common associated platform/station/datasource properties
 
 ## JSON config file structure
 
