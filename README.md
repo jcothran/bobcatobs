@@ -261,8 +261,54 @@ platform example - CUSTOM - including eval script in evalCode string
 ## eval security concerns
 In regards to security with using the javascript evaluation(eval) function, a longer general review link is [here](https://humanwhocodes.com/blog/2013/06/25/eval-isnt-evil-just-misunderstood).  The main potential advantage of using eval for this project is the abililty to create a few lines of javascript to handle unique complexities with the data source request or converting/mapping the data source response. This javascript can be [minified](https://javascript-minifier.com/) and placed in the JSON config file __evalCode__ string and marked as __"datSourceType":"CUSTOM"__ as shown with the 'SUN2' code listed earlier. The idea would be that JSON config files could be easily reviewed, shared, referenced and customized between trusted users and data sources. Use of the 'json_link' functionality as part of the initial page load as with the demo assumes an inherent trust that the JSON file referenced in the link does not contain(or will not change to contain) harmful code, similar to the trust held in [online javascript library script references](https://cdnjs.com/libraries). JSON configuration files can also be kept and loaded locally using the 'Load platform file' button.
 
-## Relational Database(RDB) example
+## Relational Database(RDB) example SQL
 
+```SQL
+CREATE TABLE public.demo_obs (
+    row_id integer NOT NULL,
+    row_update_date timestamp without time zone DEFAULT now(),
+    dataset_id character varying(30),
+    m_date timestamp without time zone,
+    temp double precision,
+    f_temp character varying(30),
+    spcond double precision,
+    f_spcond character varying(30),
+    sal double precision,
+    f_sal character varying(30),
+    do_pct double precision,
+    f_do_pct character varying(30),
+    do_mgl double precision,
+    f_do_mgl character varying(30),
+    depth double precision,
+    f_depth character varying(30),
+    ph double precision,
+    f_ph character varying(30),
+    turb double precision,
+    f_turb character varying(30),
+    f_record character varying(30),
+    historical integer,
+    provisional_plus integer,
+    level double precision,
+    f_level character varying(30),
+    c_depth double precision,
+    f_c_depth character varying(30),
+    chl_fluor double precision,
+    f_chl_fluor character varying(30),
+    c_level double precision,
+    f_c_level double precision
+);
+
+CREATE SEQUENCE public.demo_obs_row_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+ALTER TABLE ONLY public.demo_obs ALTER COLUMN row_id SET DEFAULT nextval('public.demo_obs_row_id_seq'::regclass);
+
+CREATE UNIQUE INDEX i_demo_obs ON public.demo_obs USING btree (dataset_id, m_date);
+```
 ## Links
 
 To validate JSON files https://jsonlint.com/
