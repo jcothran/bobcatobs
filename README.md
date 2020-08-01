@@ -83,13 +83,15 @@ d3.json(sourceUrl + ".json?time%2C" + sourceRefObs + "&time%3E=" + erddap_startD
 ```
   * name,group,location(optional) or other common associated platform/station/datasource properties
 
-## JSON config file structure
+## JSON config file structure and loading
 
 The [demo JSON config file](https://drive.google.com/file/d/1m0JFXeI7slOcsHUGm0lwZuB9jH4MhcoC/view?usp=sharing) consists of
 * __obsList__ section, listing observation/parameters that might be used and associated properties
 * following platform/station/datasource section which lists the data links and associated properties and observations for each data source
 
 The config file can be loaded automatically from a trusted source in the __json_link__ site call or loaded at the client by the 'Load platform file' button. The JSON configuration info could also be hard-coded within the website as part of website development.
+
+_Also note that the __json_link__ reference substitutes 'zzz' for the & symbol in the file request due to issues with how php processes a nested url._
 
 ### dataSourceType
 A CSV file with a datetime column and several associated parameters can be handled by the current config file and associated code.
