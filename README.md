@@ -288,16 +288,6 @@ CREATE TABLE public.demo_obs (
     turb double precision,
     f_turb character varying(30),
     f_record character varying(30),
-    historical integer,
-    provisional_plus integer,
-    level double precision,
-    f_level character varying(30),
-    c_depth double precision,
-    f_c_depth character varying(30),
-    chl_fluor double precision,
-    f_chl_fluor character varying(30),
-    c_level double precision,
-    f_c_level double precision
 );
 
 CREATE SEQUENCE public.demo_obs_row_id_seq
