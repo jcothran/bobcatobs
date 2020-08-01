@@ -263,7 +263,7 @@ platform example - CUSTOM - including eval script in evalCode string
 ## eval security concerns
 In regards to security with using the javascript evaluation(eval) function, a longer general review link is [here](https://humanwhocodes.com/blog/2013/06/25/eval-isnt-evil-just-misunderstood).  The main potential advantage of using eval for this project is the abililty to create a few lines of javascript to handle unique complexities with the data source request or converting/mapping the data source response. This javascript can be [minified](https://javascript-minifier.com/) and placed in the JSON config file __evalCode__ string and marked as __"datSourceType":"CUSTOM"__ as shown with the 'SUN2' code listed earlier. The idea would be that JSON config files could be easily reviewed, shared, referenced and customized between trusted users and data sources. Use of the 'json_link' functionality as part of the initial page load as with the demo assumes an inherent trust that the JSON file referenced in the link does not contain(or will not change to contain) harmful code, similar to the trust held in [online javascript library script references](https://cdnjs.com/libraries). JSON configuration files can also be kept and loaded locally using the 'Load platform file' button.
 
-## Relational Database(RDB) example SQL
+## Relational Database(RDB) example SQL(PostgreSQL)
 
 ```SQL
 CREATE TABLE public.demo_obs (
