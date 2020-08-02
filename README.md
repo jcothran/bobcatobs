@@ -182,8 +182,7 @@ platform example - relational database(RDB)
 
 platform example - CSV file
 
-Header line column names references(sourceRefObs) and time column(sourceRefTime)/format(strTimeParse) mapped in JSON file
-Using d3.parseTime format to map time, see https://github.com/d3/d3-time-format for string format info
+Header line column names references(sourceRefObs) and time column(sourceRefTime)/format(strTimeParse) mapped in JSON file. Using d3.parseTime format to map time, see https://github.com/d3/d3-time-format for string format info.
 
 ```csv
 StationCode,DateTimeStamp,F_Record,Temp,F_Temp,SpCond,F_SpCond,Sal,F_Sal,DO_Pct,F_DO_Pct,DO_mgl,F_DO_mgl,Depth,F_Depth,pH,F_pH,Turb,F_Turb
